@@ -29,8 +29,8 @@
                 $profile = new Profile;
 
                     if (isset($_GET['save'])) { //Data Transfer by $_POST
-                        $profile->updateAccount();
-                        $profile->updateRegistration();
+                        $profile->updateAccount($_POST);
+                        $profile->updateRegistration($_POST);
                     } else {
                         //$profile->getPublicProfile($_POST['userName']);
                         $profile->getPrivateAccount($_POST['userName']);
