@@ -68,7 +68,7 @@ include("../utils/DB.inc.php");
                     $db = new DB;
                     $db->updateRegistrationData($this);
                 } else {
-                    print $error_message = "Mail, First Name and Last Name required."
+                    print $error_message = "Mail, First Name and Last Name required.";
                 }
             }
 
