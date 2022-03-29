@@ -1,5 +1,7 @@
 <?php
     include("../utils/Profile.inc.php");
     $profile = new Profile;
-    var_dump($profile->getAllProfiles());
+    echo "<pre>";
+    print_r($profile->getAllProfiles());
+    echo"</pre>";
 ?>
