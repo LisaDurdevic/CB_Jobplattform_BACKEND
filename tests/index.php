@@ -34,7 +34,9 @@
                     } else {
                         //$profile->getPublicProfile($_POST['userName']);
                         $profile->getPrivateAccount($_POST['userName']);
-                        $fields = array(["userName", 'Username:', $profile->userName, '"text" required autofocus'],
+                    }
+                //----------------------------------------------------
+                $fields = array(["userName", 'Username:', $profile->userName, '"text" required autofocus'],
                                         ['"password"', 'Password:', "", '"password" placeholder = "enter new password for reset"'],
                                         ['"mail"', 'Mailaddress:', $profile->mail, '"email" required'],
                                         ['"firstName"', 'First Name:', $profile->firstName, '"text"'],
@@ -49,8 +51,6 @@
                                         ['"regionTwo"', 'Optional Working Region:', $profile->regionTwo, '"text"'],
                                         ['"preference"', 'Working Preference:', $profile->preference, '"text"'],
                                         ['"leaveDate"', 'Leave Date:', $profile->leave, '"date"']);
-                    }
-                //----------------------------------------------------
 
                 if (isset($profile->mail)) { //userName exists
 
