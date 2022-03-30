@@ -583,7 +583,7 @@
                             $profile->custom = "abcdefghijklmnopqrstuvwxyz" . random_int(1000000000, 2147483647) . "abcdefghijklmnopqrstuvwxyz"; //min. 60 steps
 
                             $this->updateRegistrationData($profile);
-                            $this->updateProfileData($profile);                  
+                            $this->updateAccountData($profile);                  
                         }
                 }
     }
