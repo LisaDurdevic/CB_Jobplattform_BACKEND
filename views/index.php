@@ -44,13 +44,16 @@
             include("../utils/Profile.inc.php");
             $profile = new Profile;
 
-            //anytime options
             if (isset($_GET['get'])) { //getting all accounts as array
                 include('./getAll.php');
             
             } else if (isset($_POST['userName'])) { //search initialized
 
                     if (isset($_GET['save'])) { //sending modified data to DB
+                            $_POST['newSkill'] === "" ? : $_POST['skills'] [] = $_POST['newSkill'];
+                            $_POST['newLanguage'] === "" ? : $_POST['languages'] [] = $_POST['newLanguage'];
+                            $_POST['newTopSkill'] === "" ? : $_POST['topSkills'] [] = $_POST['newTopSkill'];
+                            $_POST['newTopSkill'] === "" ? : $_POST['skills'] [] = $_POST['newTopSkill'];
                         $profile->updateAccount($_POST);
                         $profile->updateRegistration($_POST);
 
@@ -75,7 +78,10 @@
                                     ['"regionOne"', 'Preferred Working Region:', $profile->regionOne, '"text"'],
                                     ['"regionTwo"', 'Optional Working Region:', $profile->regionTwo, '"text"'],
                                     ['"preference"', 'Working Preference:', $profile->preference, '"text"'],
-                                    ['"leaveDate"', 'Leave Date:', $profile->leave, '"date"']);
+                                    ['"leaveDate"', 'Leave Date:', $profile->leave, '"date"'],
+                                    ['"newSkill"', 'Add Skill:', "", '"text"'],
+                                    ['"newTopSkill"', 'Add Top Skill:', "", '"text"'],
+                                    ['"newLanguage"', 'Add Language:', "", '"text"']);
         ?>
                     <form id='data-input' class='container' method='post' action='?save'>
                         <hr>
