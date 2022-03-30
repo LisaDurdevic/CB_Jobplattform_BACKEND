@@ -74,14 +74,14 @@
                                     ['"urlXing"', 'URL Xing:', $profile->xing, '"text"'],
                                     ['"urlGithub"', 'URL Github:', $profile->git, '"text"'],
                                     ['"urlCustom"', 'URL Custom:', $profile->custom, '"text"'],
-                                    ['"fullTime"', 'Working Fulltime:', $profile->fullTime, '"checkbox"'],
+                                    ['"fullTime"', 'Working Fulltime:', $profile->fullTime, '"checkbox" style="height:20px"'],
                                     ['"regionOne"', 'Preferred Working Region:', $profile->regionOne, '"text"'],
                                     ['"regionTwo"', 'Optional Working Region:', $profile->regionTwo, '"text"'],
                                     ['"preference"', 'Working Preference:', $profile->preference, '"text"'],
                                     ['"leaveDate"', 'Leave Date:', $profile->leave, '"date"'],
-                                    ['"newSkill"', 'Add Skill:', "", '"text"'],
-                                    ['"newTopSkill"', 'Add Top Skill:', "", '"text"'],
-                                    ['"newLanguage"', 'Add Language:', "", '"text"']);
+                                    ['"newSkill"', 'Add Skill:', "", '"text" class="col-sm bg-warning"'],
+                                    ['"newTopSkill"', 'Add Top Skill:', "", '"text" class="col-sm bg-warning"'],
+                                    ['"newLanguage"', 'Add Language:', "", '"text" class="col-sm bg-warning"']);
         ?>
                     <form id='data-input' class='container' method='post' action='?save'>
                         <hr>
@@ -107,6 +107,9 @@
                         }
         ?>
                         <hr>
+                        <p class='row bg-primary'>
+                            Hold CRTL and deselect options you want to drop.
+                        </p>
                         <p class='row'>
                             <label for='skills' class='col-sm'>
                                 Skills:
