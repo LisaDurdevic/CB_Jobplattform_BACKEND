@@ -23,7 +23,7 @@ class Username {
                 $j = random_int(0, sizeOf($middle)-1);
                 $end = random_int(0, 100);
 
-            $string = $start[$i] . $middle[$j] . '_' . $end;
+            $string = $start[$i] . $middle[$j] . $end;
             $this->name = $string;
         }
 }
